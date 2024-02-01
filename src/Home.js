@@ -21,7 +21,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className='vh-100 vw-100'>
+        <div className='vh-100'>
             <Header />
             <div className='w-100 container row mx-auto my-4'>
                 {data.map((show) => (

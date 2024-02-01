@@ -5,10 +5,10 @@ import ShowDetails from './ShowDetails';
 
 export default function App() {
   return (
-    <div className='vh-100 vw-100'>
+    <div className='h-100 w-100'>
      <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/showDetails' element={<ShowDetails/>}/>
+      <Route path='/showDetails/:showId' element={<ShowDetails/>}/>
      </Routes>
     </div>
   )

@@ -18,7 +18,10 @@ export default function ShowCard({ showDetail }) {
             <div className='d-flex justify-content-between'>
                 <span className='p-2 rounded-end' style={{ color: "#00a8c6", backgroundColor: "#CCF0F3" }}>
                     {show.genres.map((genre, index) => (
-                        <span key={index}>{genre}, </span>
+                        <span key={index}>
+                            {genre}
+                            {index < show.genres.length - 1 && ', '}
+                        </span>
                     ))}
                 </span>
 
@@ -36,10 +39,10 @@ export default function ShowCard({ showDetail }) {
                         {show.language}
                     </h6>
                     <p className=''>
-                {show.type}
+                        {show.type}
                     </p>
                 </div>
-                <Link to={`/showDetails`} className="btn btn-outline-danger rounded-circle h-100 d-flex align-items-center">
+                <Link to={`/showDetails/${show.id}`} className="btn btn-outline-danger rounded-circle h-100 d-flex align-items-center">
                     <BsArrowRight className='arrow mx-0' />
                 </Link>
             </div>
