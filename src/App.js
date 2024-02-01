@@ -1,12 +1,14 @@
 import React from 'react'
 import {Routes, Route } from 'react-router-dom';
 import Home from './Home';
+import ShowDetails from './ShowDetails';
 
 export default function App() {
   return (
     <div className='vh-100 vw-100'>
      <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/showDetails' element={<ShowDetails/>}/>
      </Routes>
     </div>
   )
